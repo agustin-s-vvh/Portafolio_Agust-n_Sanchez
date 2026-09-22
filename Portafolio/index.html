@@ -1,148 +1,410 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agustín Sánchez</title>
+    <meta name="author" content="Agustín Sánchez">
+    <title>Agustín Sánchez | Portafolio</title>
 
     <link rel="stylesheet" href="static/css/style.css">
-    <script src="static/js/script.js" defer></script>
 </head>
 
 <body>
 
-    <nav id="barra-navegacion">
-        <div class="nombre-logo">Agustín Sánchez</div>
+    <header>
+        <nav id="barra-navegacion">
+            <a href="#inicio" class="logo">Agustín Sánchez</a>
 
-        <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
-            ☰
-        </button>
+            <button id="boton-menu" aria-label="Abrir menú">
+                ☰
+            </button>
 
-        <ul class="menu-enlaces" id="menu-enlaces">
-            <li><a href="#sobre-mi">Acerca de</a></li>
-            <li><a href="#mis-habilidades">Habilidades</a></li>
-            <li><a href="#mi-experiencia">Experiencia</a></li>
-            <li><a href="#mi-contacto">Contacto</a></li>
-        </ul>
-    </nav>
+            <div id="menu-enlaces">
+                <a href="#sobre-mi">Acerca de</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#mis-habilidades">Habilidades</a>
+                <a href="#mis-proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
 
-    <header class="presentacion">
-        <h1>Hola, soy Agustín Sánchez</h1>
-        <h2>Soy programador</h2>
-
-        <div class="botones-inicio">
-            <a href="#mi-contacto" class="boton principal">Contacto</a>
-            <a href="#mis-habilidades" class="boton secundario">Ver Habilidades</a>
-        </div>
+        </nav>
     </header>
 
-    <section id="sobre-mi">
-        <h2 class="encabezado-seccion">Acerca de</h2>
+    <main>
 
-        <p class="descripcion-personal">
-            Soy un desarrollador web de Chile, interesado en crear soluciones digitales innovadoras,
-            funcionales y fáciles de usar. Me motiva aprender constantemente y transformar ideas
-            en proyectos que aporten valor.
-        </p>
-    </section>
+        <section id="inicio" class="seccion-inicio">
 
-    <section id="areas-programacion">
-        <h2 class="encabezado-seccion">Áreas</h2>
+            <div class="contenido-inicio">
 
-        <div class="contenedor-tarjetas">
-
-            <div class="tarjeta">
-                <h3>HTML</h3>
-                <p>Estructuración semántica de aplicaciones web.</p>
-            </div>
-
-            <div class="tarjeta">
-                <h3>CSS</h3>
-                <p>Diseño responsivo, animaciones y estilos modernos.</p>
-            </div>
-
-            <div class="tarjeta">
-                <h3>JavaScript</h3>
-                <p>Lógica de programación e interactividad dinámica.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="mis-habilidades">
-        <h2 class="encabezado-seccion">Technical Expertise</h2>
-
-        <div class="lista-habilidades">
-            <h3>Lenguajes</h3>
-
-            <div class="elemento-habilidad">
-                <div class="nombre-habilidad">
-                    <span>HTML5</span>
-                    <span>85%</span>
+                <div class="etiqueta-inicio">
+                    Disponible para nuevos proyectos
                 </div>
 
-                <div class="barra-progreso">
-                    <div class="nivel-progreso" data-width="85%"></div>
-                </div>
-            </div>
+                <p class="saludo">Hola, soy</p>
 
-            <div class="elemento-habilidad">
-                <div class="nombre-habilidad">
-                    <span>CSS</span>
-                    <span>80%</span>
-                </div>
+                <h1>Agustín Sánchez</h1>
 
-                <div class="barra-progreso">
-                    <div class="nivel-progreso" data-width="80%"></div>
-                </div>
-            </div>
-
-            <div class="elemento-habilidad">
-                <div class="nombre-habilidad">
-                    <span>JavaScript</span>
-                    <span>70%</span>
-                </div>
-
-                <div class="barra-progreso">
-                    <div class="nivel-progreso" data-width="70%"></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="mi-experiencia">
-        <h2 class="encabezado-seccion">Experiencia de trabajo</h2>
-
-        <div class="historial-trabajo">
-
-            <div class="experiencia">
-                <h3>Desarrollador Freelance</h3>
-
-                <div class="fecha-trabajo">
-                    2024 - Presente
-                </div>
+                <h2>Desarrollador Web</h2>
 
                 <p>
-                    Desarrollo de proyectos web dinámicos y funcionales.
+                    Soy un desarrollador web de Chile interesado en crear
+                    soluciones digitales modernas, funcionales y atractivas.
+                    Me gusta aprender nuevas tecnologías y convertir ideas
+                    en proyectos digitales.
                 </p>
+
+                <div class="inicio-botones">
+                    <a href="#mis-proyectos" class="boton-principal">Ver mis proyectos</a>
+                    <a href="#contacto" class="boton-principal">Contáctame</a>
+                </div>
+
             </div>
 
-        </div>
-    </section>
+        </section>
 
-    <section id="mi-contacto">
-        <h2 class="encabezado-seccion">Contacto</h2>
+        <section id="sobre-mi" class="seccion">
 
-        <p class="informacion-contacto">
-            Chile | <strong>Agustín Sánchez</strong>
-            <a href="#">AgustínSanchez@gmail.com</a>
+            <div class="titulo-contenedor">
+                <h2 class="encabezado-seccion">Acerca de mí</h2>
+            </div>
+
+            <div class="tarjeta">
+
+                <div>
+                    <p>
+                        Mi nombre es Agustín Sanchez,
+                        soy un estudiante y desarrollador web de Chile apasionado
+                        por la tecnología y la creación de soluciones digitales.
+                        Me interesa seguir desarrollando mis conocimientos en
+                        programación y diseño web.
+                    </p>
+
+                    <p>
+                        Actualmente trabajo con tecnologías como HTML, CSS y
+                        JavaScript, además de utilizar Git y GitHub para organizar
+                        y gestionar todos mis proyectos.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="educacion" class="seccion">
+
+            <h2 class="encabezado-seccion">Educación</h2>
+
+            <div class="educacion-card">
+
+                <div class="educacion-logo">
+                    <img src="static/images/liceo.png" alt="Logo Liceo Vicente Huidobro">
+                </div>
+
+                <div class="educacion-contenido">
+
+                    <h3>Técnico en Programación - En curso</h3>
+
+                    <div class="institucion">
+                        <strong>Institución:</strong>
+
+                        <span>
+                            Liceo Vate Vicente Huidobro
+                            <br>
+                            San Ramón, Santiago de Chile
+                        </span>
+                    </div>
+
+                    <p>
+                        Formación enfocada en el desarrollo de conocimientos y
+                        habilidades en el área de programación y tecnología,
+                        incluyendo el aprendizaje de herramientas, lenguajes y
+                        metodologías relacionadas con el desarrollo de software.
+                    </p>
+
+                    <p>
+                        <strong>Objetivo:</strong>
+                        Completar mi formación y graduarme en el área de Programación,
+                        continuando posteriormente con el desarrollo de mis habilidades
+                        y conocimientos tecnológicos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="habilidad">
+
+            <h2 class="section-title">Competencias Técnicas</h2>
+
+            <div class="skills-container">
+
+                <h3>Tecnologías Principales</h3>
+
+                <div class="skill-item">
+
+                    <div class="skill-name">
+                        <span>HTML5</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" data-width="85%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill-item">
+
+                    <div class="skill-name">
+                        <span>CSS3</span>
+                        <span>80%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" data-width="80%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill-item">
+
+                    <div class="skill-name">
+                        <span>JavaScript</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" data-width="70%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill-item">
+
+                    <div class="skill-name">
+                        <span>Git</span>
+                        <span>50%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" data-width="50%"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill-item">
+
+                    <div class="skill-name">
+                        <span>GitHub</span>
+                        <span>60%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress" data-width="60%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="mis-habilidades" class="seccion">
+
+            <div class="titulo-contenedor">
+                <h2 class="encabezado-seccion">Experiencia técnica</h2>
+            </div>
+
+            <div class="habilidades-contenedor">
+
+                <div class="habilidades-grupo">
+
+                    <div class="habilidad">
+                        <h3>HTML</h3>
+                        <p>Estructuración y creación de páginas web.</p>
+                    </div>
+
+                    <div class="habilidad">
+                        <h3>CSS</h3>
+                        <p>Diseño, estilos, layouts y páginas responsivas.</p>
+                    </div>
+
+                    <div class="habilidad">
+                        <h3>JavaScript</h3>
+                        <p>Interactividad y funcionalidades dinámicas.</p>
+                    </div>
+
+                </div>
+
+                <div class="habilidades-grupo habilidades-git">
+
+                    <div class="habilidad">
+                        <h3>Git</h3>
+                        <p>Control de versiones y organización de proyectos.</p>
+                    </div>
+
+                    <div class="habilidad">
+                        <h3>GitHub</h3>
+                        <p>Gestión y publicación de proyectos.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="mis-proyectos" class="seccion">
+
+            <div class="titulo-contenedor">
+                <h2 class="encabezado-seccion">Proyectos</h2>
+            </div>
+
+            <div class="proyectos-contenedor">
+
+                <article class="proyecto-card">
+
+                    <div class="proyecto-contenido">
+
+                        <span class="proyecto-numero">01 / WEB</span>
+
+                        <h3>JunaWeb</h3>
+
+                        <p>
+                            Plataforma web diseñada para optimizar el acceso
+                            al comedor escolar mediante un sistema de reservas
+                            y validación con códigos QR.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="proyecto-botones">
+
+                            <a href="https://ariel9930.github.io/JunaWeb/" target="_blank" class="boton-proyecto">
+                                Ver proyecto →
+                            </a>
+
+                            <a href="https://github.com/ariel9930/JunaWeb" target="_blank"
+                                class="boton-proyecto boton-github">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="proyecto-card">
+
+                    <div class="proyecto-contenido">
+
+                        <span class="proyecto-numero">02 / WEB</span>
+
+                        <h3>Cyberpunk 2077</h3>
+
+                        <p>
+                            Pagina web informativa sobre el juego Cyberpunk 2077,
+                            dando informacion breve sobre: Personajes, Armas y
+                            trailers, ademas de tener un soporte tecnico.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <div class="proyecto-botones">
+
+                            <a href="https://gabrilinsky.github.io/Skillnest_fundamentos_web/" target="_blank"
+                                class="boton-proyecto">
+                                Ver proyecto →
+                            </a>
+
+                            <a href="https://github.com/Gabrilinsky/Skillnest_fundamentos_web/tree/main/static"
+                                target="_blank" class="boton-proyecto boton-github">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="contacto" class="seccion">
+
+            <h2 class="encabezado-seccion">Contacto</h2>
+
+            <div class="contacto-contenedor">
+
+                <p>
+                    Deja tus datos y responderé
+                    tu mensaje cuanto antes.
+                </p>
+
+                <form id="formulario-contacto" class="formulario-contacto">
+
+                    <div class="campo-formulario">
+                        <label for="nombre">NOMBRE</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="correo">CORREO</label>
+                        <input type="email" id="correo" name="correo" placeholder="tucorreo.com">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="mensaje">MENSAJE</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">
+                        • &nbsp; ENVIAR
+                    </button>
+
+                    <a href="https://www.linkedin.com/in/agustín-sanchez-67a527437" target="_blank"
+                        class="boton-linkedin">
+                        <span class="linkedin-logo">in</span>
+                        LinkedIn
+                    </a>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <a href="#inicio" class="boton-inicio">
+        ↑ Volver al inicio
+    </a>
+
+    <footer>
+
+        <p>
+            © 2026 Agustín Sánchez. Todos los derechos reservados.
         </p>
-    </section>
 
-    <footer class="pie-pagina">
-        <p>&copy; 2026 Agustín Sánchez</p>
     </footer>
 
+    <script src="static/js/script.js"></script>
+
 </body>
-</html>
+
+</html> 

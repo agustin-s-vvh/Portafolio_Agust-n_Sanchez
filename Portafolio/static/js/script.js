@@ -1,76 +1,68 @@
-document.addEventListener("DOMContentLoaded", () => {
+const botonMenu = document.getElementById("boton-menu");
+const menuEnlaces = document.getElementById("menu-enlaces");
 
-    const botonMenu = document.getElementById("boton-menu");
-    const menuPrincipal = document.getElementById("menu-enlaces");
+botonMenu.addEventListener("click", () => {
+    menuEnlaces.classList.toggle("activo");
+});
 
-    if (botonMenu && menuPrincipal) {
+document.querySelectorAll("#menu-enlaces a").forEach(enlace => {
+    enlace.addEventListener("click", () => {
+        menuEnlaces.classList.remove("activo");
+    });
+});
 
-        botonMenu.addEventListener("click", () => {
-            menuPrincipal.classList.toggle("mostrar");
-        });
-
-        const enlaces = menuPrincipal.querySelectorAll("a");
-
-        enlaces.forEach((enlace) => {
-            enlace.addEventListener("click", () => {
-                menuPrincipal.classList.remove("mostrar");
-            });
-        });
+document.addEventListener("click", evento => {
+    if (
+        !menuEnlaces.contains(evento.target) &&
+        !botonMenu.contains(evento.target)
+    ) {
+        menuEnlaces.classList.remove("activo");
     }
+});
 
+document.querySelectorAll(".progress").forEach(progress => {
+    progress.style.width = progress.dataset.width;
+});
 
-    const barras = document.querySelectorAll(".nivel-progreso");
+const formularioContacto = document.getElementById("formulario-contacto");
 
-    function animarBarras() {
+formularioContacto.addEventListener("submit", evento => {
+    evento.preventDefault();
 
-        barras.forEach((barra) => {
+    const mensaje = document.createElement("div");
 
-            const porcentaje = barra.getAttribute("data-width");
-            const posicion = barra.getBoundingClientRect();
+    mensaje.className = "mensaje-enviado";
 
-            if (
-                posicion.top < window.innerHeight &&
-                posicion.bottom >= 0
-            ) {
-                barra.style.width = porcentaje;
-            }
+    mensaje.innerHTML = `
+        <div class="mensaje-icono">✓</div>
+        <div class="mensaje-texto">
+            <h3>¡Mensaje enviado!</h3>
+            <p>Ha sido enviado tu mensaje correctamente.</p>
+        </div>
+        <button class="cerrar-mensaje">&times;</button>
+    `;
 
-        });
-    }
+    document.body.appendChild(mensaje);
 
-    window.addEventListener("scroll", animarBarras);
-    animarBarras();
+    setTimeout(() => {
+        mensaje.classList.add("mostrar");
+    }, 10);
 
-
-    const secciones = document.querySelectorAll("section");
-    const enlacesNavegacion = document.querySelectorAll(".menu-enlaces a");
-
-    window.addEventListener("scroll", () => {
-
-        let seccionActual = "";
-
-        secciones.forEach((seccion) => {
-
-            const limiteSuperior = seccion.offsetTop - 100;
-
-            if (window.scrollY >= limiteSuperior) {
-                seccionActual = seccion.getAttribute("id");
-            }
-
-        });
-
-        enlacesNavegacion.forEach((enlace) => {
-
-            enlace.classList.remove("seleccionado");
-
-            if (
-                enlace.getAttribute("href") === "#" + seccionActual
-            ) {
-                enlace.classList.add("seleccionado");
-            }
-
-        });
-
+    mensaje.querySelector(".cerrar-mensaje").addEventListener("click", () => {
+        cerrarMensaje(mensaje);
     });
 
+    setTimeout(() => {
+        cerrarMensaje(mensaje);
+    }, 5000);
+
+    formularioContacto.reset();
 });
+
+function cerrarMensaje(mensaje) {
+    mensaje.classList.remove("mostrar");
+
+    setTimeout(() => {
+        mensaje.remove();
+    }, 400);
+}
