@@ -66,3 +66,4 @@ function cerrarMensaje(mensaje) {
         mensaje.remove();
     }, 400);
 }
+
