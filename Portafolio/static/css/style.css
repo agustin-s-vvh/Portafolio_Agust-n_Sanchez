@@ -1196,11 +1196,6 @@ footer {
     transform: translate(3px, -3px);
 }
 
-
-/* ============================= */
-/*          CELULARES             */
-/* ============================= */
-
 @media (max-width: 768px) {
 
     .tarjeta-proyecto {
